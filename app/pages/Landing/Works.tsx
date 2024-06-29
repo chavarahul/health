@@ -37,16 +37,17 @@ const steps = [
 
 const Works = () => {
     useEffect(()=>{
-        const t1 = gsap.timeline() ;
+        const t1 = gsap.timeline();
+        t1
     },[])
   return (
-    <section className="py-20 mt-52 bg-white text-center">
+    <section className="py-20 mt-52 bg-white text-center" id="works">
       <div className="container mx-auto px-4">
         <span className={`${poppin.className} bg-purple-100 text-purple-600 py-1 px-3 rounded-full text-sm font-semibold`}>WORK PROCESS</span>
         <h2 className="text-4xl font-bold mt-4 mb-8">How It Works</h2>
         <div className="flex flex-col mt-20 lg:flex-row justify-center items-center lg:space-x-8 px-10">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col items-center mb-8 lg:mb-0">
+            <div key={index} className="flex flex-col items-center mb-8 px-4 lg:mb-0">
               <div className="bg-gradient-to-r from-purple-400 to-pink-500 p-4 rounded-full mb-4">
                 {step.icon}
               </div>

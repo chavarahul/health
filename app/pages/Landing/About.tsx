@@ -34,7 +34,7 @@ const About = () => {
         }
       ];
     return (
-        <section className="bg-white text-black py-20 min-h-screen relative">
+        <section className="bg-white text-black py-20 min-h-screen relative" id='about'>
             <div className="container mx-auto flex-all px-20">
                 <div className="text-left mb-16 max-w-[45%]  mt-72">
                     <span className="bg-purple-100 text-purple-600 py-1 px-3 rounded-full text-sm font-semibold">WHY CHOOSE US</span>

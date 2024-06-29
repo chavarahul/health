@@ -1,4 +1,5 @@
 // components/FinancerHeader.tsx
+'use client'
 
 import { poppin } from '@/app/constants';
 import Link from 'next/link';
@@ -8,7 +9,9 @@ import Image from 'next/image';
 import pulse from '@/public/pulusu.svg'
 import dna from '@/public/4.svg'
 import Logo from '@/public/BOOMSCHIk.svg'
+import { useRouter } from 'next/navigation';
 const Hero = () => {
+  const router = useRouter();
   return (
     <header className="bg-white text-black">
       <div className="container mx-auto p-4 flex justify-between items-center">
@@ -19,13 +22,13 @@ const Hero = () => {
           </div>
           <nav className="ml-52 space-x-4 border border-gray-300 p-4 rounded-[30px] w-[40rem] flex-all">
             <Link href="#" className={`text-purple-600 ${poppin.className} `}>Home</Link>
-            <Link href="#" className={`hover:text-gray-600 ${poppin.className} `}>About Us</Link>
-            <Link href="#" className={`hover:text-gray-600 ${poppin.className} `}>Services</Link>
+            <Link href="/#about" className={`hover:text-gray-600 ${poppin.className} `}>About Us</Link>
+            <Link href="/#works" className={`hover:text-gray-600 ${poppin.className} `}>Services</Link>
             <Link href="#" className={`hover:text-gray-600 ${poppin.className} `}>Contact Us</Link>
           </nav>
         </div>
         <div className="flex items-center space-x-4 mr-20">
-          <button className={`${poppin.className} bg-gradient-to-r from-purple-400 to-pink-500 text-white py-2 px-4 rounded-full text-sm`}>Emergency</button>
+          <button className={`${poppin.className} bg-gradient-to-r from-purple-400 to-pink-500 text-white py-2 px-8 rounded-full text-sm`} onClick={()=>{router.push('/Login')}}>Login</button>
         </div>
       </div>
       <div className="text-center py-20">
